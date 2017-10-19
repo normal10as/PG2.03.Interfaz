@@ -1,6 +1,6 @@
 ﻿Imports Entidades
 
-Public Class Cliente
+Public Class Empleado
     Implements ICumpleañero
 
     Private _fechaNacimiento As Date
@@ -9,6 +9,7 @@ Public Class Cliente
     Sub New()
 
     End Sub
+
     Public Property nombre As String
         Get
             Return _nombre
@@ -28,6 +29,7 @@ Public Class Cliente
     End Property
 
     Public Function isCumpleañosHoy() As Boolean Implements ICumpleañero.isCumpleañosHoy
+        'refactorizar para alguien q no sea un recien nacido
         Return Today.Date = fechaNacimiento.Date
     End Function
 
