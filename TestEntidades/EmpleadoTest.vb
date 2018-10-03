@@ -5,8 +5,13 @@ Module EmpleadoTest
         Dim e As New Empleado()
         e.nombre = "Pepe"
         e.fechaNacimiento = Today
-        Console.WriteLine(e.isCumpleañosHoy)
+        mostrarEmpleado(e)
         e.fechaNacimiento = Today.AddYears(-1)
+        mostrarEmpleado(e)
+    End Sub
+
+    Private Sub mostrarEmpleado(e As Empleado)
+        Console.WriteLine(e.fechaNacimiento)
         Console.WriteLine(e.isCumpleañosHoy)
     End Sub
 End Module

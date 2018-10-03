@@ -3,24 +3,24 @@
 Module RRHHTest
 
     Sub Main()
-        Dim r As New RRHH()
+        Dim rrhh As New RRHH()
 
-        Dim c As New Cliente()
-        c.nombre = "Juan Perez"
-        c.fechaNacimiento = Today.Date
-        r.addCumpleañero(c)
+        Dim cliente1 As New Cliente()
+        cliente1.nombre = "Juan Perez"
+        cliente1.fechaNacimiento = Today.Date
+        rrhh.addCumpleañero(cliente1)
 
-        Dim e As New Empleado()
-        e.nombre = "Pepe"
-        e.fechaNacimiento = Today.Date
-        r.addCumpleañero(e)
+        Dim empleado1 As New Empleado()
+        empleado1.nombre = "Pepe"
+        empleado1.fechaNacimiento = Today.Date
+        rrhh.addCumpleañero(empleado1)
 
-        Dim e2 As New Empleado()
-        e2.nombre = "Portero"
-        e2.fechaNacimiento = Today.Date.AddDays(1)
-        r.addCumpleañero(e2)
+        Dim empleado2 As New Empleado()
+        empleado2.nombre = "Portero"
+        empleado2.fechaNacimiento = Today.Date.AddDays(-10)
+        rrhh.addCumpleañero(empleado2)
 
-        r.felicitarCumpleañeros()
+        rrhh.felicitarCumpleañeros()
     End Sub
 
 End Module

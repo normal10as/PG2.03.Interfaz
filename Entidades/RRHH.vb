@@ -3,7 +3,6 @@
 
     Sub New()
         _icumpleañeros = New List(Of ICumpleañero)
-
     End Sub
 
     Public Sub addCumpleañero(cumpleañero As ICumpleañero)
@@ -19,11 +18,11 @@
     End Function
 
     Public Sub felicitarCumpleañeros()
+        Console.WriteLine("Feliz cumpleaños:")
         For Each cumpleañero As ICumpleañero In getAllCumpleañeros()
             If cumpleañero.isCumpleañosHoy() Then
-                Console.WriteLine("Feliz cumpleaños" & cumpleañero.ToString())
+                Console.WriteLine(cumpleañero.ToString())
             End If
         Next
-
     End Sub
 End Class

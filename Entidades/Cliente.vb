@@ -6,9 +6,6 @@ Public Class Cliente
     Private _fechaNacimiento As Date
     Private _nombre As String
 
-    Sub New()
-
-    End Sub
     Public Property nombre As String
         Get
             Return _nombre
